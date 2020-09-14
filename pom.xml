@@ -121,6 +121,21 @@
       <scope>provided</scope>
       <version>${version.h2}</version>
     </dependency>
+    
+    <!-- Camunda BPM Process Test Coverage -->
+    <dependency>
+      <groupId>org.camunda.bpm.extension</groupId>
+      <artifactId>camunda-bpm-process-test-coverage</artifactId>
+      <version>0.3.2</version>
+      <scope>test</scope>
+    </dependency>  
+    
+    <!-- Java version >= 9 -->
+    <dependency>
+      <groupId>com.sun.xml.bind</groupId>
+      <artifactId>jaxb-impl</artifactId>
+      <version>2.2.4</version>
+    </dependency>
 
   </dependencies>
 

@@ -26,6 +26,8 @@ import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.task;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.camunda.bpm.engine.test.Deployment;
 import org.camunda.bpm.engine.test.ProcessEngineRule;
+import org.camunda.bpm.extension.process_test_coverage.junit.rules.TestCoverageProcessEngineRuleBuilder;
+import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -36,7 +38,8 @@ import org.junit.Test;
 public class SimpleTestCase {
 
   @Rule
-  public ProcessEngineRule rule = new ProcessEngineRule();
+  @ClassRule
+  public static ProcessEngineRule rule = TestCoverageProcessEngineRuleBuilder.create().build();
 
   @Test
   @Deployment(resources = {"testProcess.bpmn"})
